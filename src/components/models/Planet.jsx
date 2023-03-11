@@ -8,12 +8,13 @@ Title: Stylized planet
 */
 
 import React, { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei/core'
+import { useGLTF } from '@react-three/drei/core'
+import planet from './planet.gltf'
 
 export function Model2(props) {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/planet.gltf')
-  const { actions } = useAnimations(animations, group)
+  const { nodes, materials } = useGLTF(planet)
+  //const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Sketchfab_Scene">
@@ -34,4 +35,4 @@ export function Model2(props) {
   )
 }
 
-useGLTF.preload('/planet.gltf')
+useGLTF.preload(planet)

@@ -4,7 +4,7 @@ body {
   font-family: "Open Sans", sans-serif;
   /* background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(66, 93, 228) 100%); */
   background: black;
-  overflow-x:'hidden';
+  overflow-x: "hidden";
 }
 
 a {
@@ -71,6 +71,21 @@ li {
   max-height: 650px;
   max-width: 650px;
 }
+
+.codeLink {
+  color: white;
+  position: relative;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.liveLink {
+  color: white;
+  position: relative;
+
+}
+
+
 
 @media (max-width: 768px) {
   .navbar {

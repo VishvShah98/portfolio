@@ -9,11 +9,12 @@ import IR3 from "./assets/IR-3.mp4";
 import IR4 from "./assets/IR-4.mp4";
 import SS1 from "./assets/SS-1.mp4";
 import SS2 from "./assets/SS-2.mp4";
-import VS1 from './assets/VS-1.mp4';
-import VS2 from './assets/VS-2.mp4'
+import VS1 from "./assets/VS-1.mp4";
+import VS2 from "./assets/VS-2.mp4";
 import IRMobile from "./assets/IR-mobile.mp4";
 import SSMobile from "./assets/SS-mobile.mp4";
-import VSMobile from './assets/VS-mobile.mp4';
+import VSMobile from "./assets/VS-mobile.mp4";
+import { FaCode, FaDesktop } from "react-icons/fa";
 
 import { motion, useScroll, useSpring } from "framer-motion";
 
@@ -59,27 +60,25 @@ export default function Main() {
             }}
           >
             <span className="importantText intro-heading">
-              Social Media Application
-            </span>
-          </p>
-          <Projects
-            video={videosSS}
-            mobileVideo={SSMobile}
-            projectInfo={[
-              "Elegant and User Friendly Interface",
-              "Seamless Content Management",
-              "Secure and Reliable",
-            ]}
-          />
-          <p
-            style={{
-              fontSize: "4vw",
-              marginBottom: "2vw",
-              textAlign: "center",
-            }}
-          >
-            <span className="importantText intro-heading">
               Immersive Realities
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/VishvShah98/immersive-realities/tree/master"
+                className="codeLink"
+              >
+                {" "}
+                <FaCode />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://vishvshah98.github.io/immersive-realities/"
+                className="liveLink"
+              >
+                {" "}
+                <FaDesktop />
+              </a>
             </span>
           </p>
 
@@ -92,8 +91,46 @@ export default function Main() {
               "Cutting-Edge Technology Showcase",
             ]}
           />
+          <p
+            style={{
+              fontSize: "4vw",
+              marginBottom: "2vw",
+              textAlign: "center",
+            }}
+          >
+            <span className="importantText intro-heading">
+              Social Media Application
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/VishvShah98/sociosphere-frontend.git"
+                className="codeLink"
+              >
+                {" "}
+                <FaCode />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://sociosphere.onrender.com/"
+                className="liveLink"
+              >
+                {" "}
+                <FaDesktop />
+              </a>{" "}
+            </span>
+          </p>
+          <Projects
+            video={videosSS}
+            mobileVideo={SSMobile}
+            projectInfo={[
+              "Elegant and User Friendly Interface",
+              "Seamless Content Management",
+              "Secure and Reliable",
+            ]}
+          />
 
-<p
+          <p
             style={{
               fontSize: "4vw",
               marginBottom: "2vw",
@@ -102,6 +139,24 @@ export default function Main() {
           >
             <span className="importantText intro-heading">
               Vedic Sanskrit Tutoring
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://github.com/VishvShah98/vedic-sanskrit/tree/master"
+                className="codeLink"
+              >
+                {" "}
+                <FaCode />
+              </a>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://vishvshah98.github.io/vedic-sanskrit/"
+                className="liveLink"
+              >
+                {" "}
+                <FaDesktop />
+              </a>
             </span>
           </p>
 
@@ -112,7 +167,7 @@ export default function Main() {
               "Sanskrit Tutor Platform",
               "Study Material Access",
               "Schedule Management",
-              "Location Mapping"
+              "Location Mapping",
             ]}
           />
         </div>
