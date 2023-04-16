@@ -42,7 +42,7 @@ import { useForm, ValidationError } from '@formspree/react';
 export default function Form() {
   const [state, handleSubmit] = useForm("mpzerqww");
   if (state.succeeded) {
-      return <p>Thank you!</p>;
+      return <p style={{color:'white'}}>Thank you!</p>;
   }
   return (
     <div style={{height:'100vh'}}>
@@ -58,14 +58,14 @@ export default function Form() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        width:'250px',
+        width:'300px',
         padding: '20px',
         border: '3px solid black',
        // background:'#ADFF2F',
        background:'#E4E6F1',
         borderRadius:'5%'
       }}>
-        <label htmlFor="email" style={{ marginBottom: '10px', fontWeight:'600' }}>
+        <label htmlFor="email" style={{ marginBottom: '10px', fontWeight:'600', fontFamily: "Open Sans, sans-serif" }}>
           Get in touch !
         </label>
         <input
@@ -73,7 +73,7 @@ export default function Form() {
           type="email" 
           name="email"
           placeholder="Your email address"
-          style={{ width: '100%', marginBottom: '20px', border: '1px solid black' }}
+          style={{ width: '100%', marginBottom: '20px', border: '1px solid black' , fontFamily: "Open Sans, sans-serif"}}
         />
         <ValidationError 
           prefix="Email" 
@@ -84,7 +84,7 @@ export default function Form() {
           id="message"
           name="message"
           placeholder="Message"
-          style={{ width: '100%', height: '150px', marginBottom: '20px', resize:'none', border: '1px solid black' }}
+          style={{ width: '100%', height: '200px', marginBottom: '20px', resize:'none', border: '1px solid black',  fontFamily: "Open Sans, sans-serif" }}
         />
         <ValidationError 
           prefix="Message" 
@@ -95,7 +95,7 @@ export default function Form() {
           Submit
         </button>
       </form></div>
-      <p className='email'
+      {/* <p className='email'
           style={{
             textAlign: "center",
             margin:'0px'
@@ -104,7 +104,7 @@ export default function Form() {
           <a href="mailto:vishvshahwork@gmail.com" style={{fontWeight:'1000' , color: "transparent",
               WebkitTextStroke: `2px #ADFF2F`}}>vishvshahwork@gmail.com</a>
           
-        </p>
+        </p> */}
     </div>
   );
 }

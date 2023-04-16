@@ -37,9 +37,9 @@ a {
 
 .square {
   z-index: 3;
-  width: 13.5vw;
-  height: 13.5vw;
-  left: 25vw;
+  width: 15vw;
+  height: 15vw;
+  /* left: 25vw; */
   background-color: white;
   position: absolute;
   display: flex;
@@ -51,9 +51,9 @@ a {
   position: fixed;
   left: 0;
   right: 0;
-  height: 0.75vh;
+  height: 0.4vh;
   background: white;
-  bottom: 5vh;
+  bottom: 1vh;
   z-index: 10;
 }
 
@@ -72,6 +72,11 @@ li {
   max-width: 650px;
 }
 
+.mainSlider{
+  max-height: 650px;
+  max-width: 750px;
+}
+
 .codeLink {
   color: white;
   position: relative;
@@ -82,10 +87,7 @@ li {
 .liveLink {
   color: white;
   position: relative;
-
 }
-
-
 
 @media (max-width: 768px) {
   .navbar {
@@ -107,7 +109,7 @@ li {
   .skill-box {
     width: 30vh;
     height: 30vh;
-    border-radius: 30%;
+    border-radius: 20%;
     margin-bottom: 1vh;
   }
   .icon {
@@ -151,7 +153,7 @@ li {
   .skill-box {
     width: 30vh;
     height: 30vh;
-    border-radius: 30%;
+    border-radius: 20%;
     margin-bottom: 1vh;
   }
   .icon {
@@ -199,7 +201,7 @@ li {
   .skill-box {
     width: 25vw;
     height: 25vw;
-    border-radius: 30%;
+    border-radius: 20%;
   }
   .skill-heading {
     font-size: 2.5vw;

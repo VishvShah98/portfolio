@@ -80,7 +80,7 @@ export default function Navbar() {
 
         <NavButton
           icon={<FaProjectDiagram />}
-          label="My Work"
+          label="Projects"
           click={handleMyWorkClick}
         />
 

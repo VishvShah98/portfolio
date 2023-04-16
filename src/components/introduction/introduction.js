@@ -86,12 +86,17 @@ export default function Introduction() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            width:'100%'
+            width: "100%",
           }}
-        ><motion.div
-         variants={imageVariants}
-         initial="initial"
-         animate="animate"><Model22 /></motion.div></div>
+        >
+          <motion.div
+            variants={imageVariants}
+            initial="initial"
+            animate="animate"
+          >
+            <Model22 />
+          </motion.div>
+        </div>
       </div>
       <div style={{ width: "50%", position: "relative" }}>
         <div
@@ -101,7 +106,6 @@ export default function Introduction() {
             left: "50%",
             transform: "translate(-50%, -50%)",
             width: "100%",
-    
           }}
         >
           <motion.p
@@ -118,13 +122,11 @@ export default function Introduction() {
               textAlign: "left",
             }}
           >
-            <span className='intro-heading'>
-              Hi, I'm <span className="importantText">Vishv Shah</span>, a
-              <span className="importantText"> Software Developer</span>
+            <span className="intro-heading">
+              I'm <span className="importantText">Vishv Shah</span>, a
+              <span className="importantText"> Web Developer</span>
             </span>
-            <br />I build scalable and efficient applications that drive
-            business growth. Let's work together to turn your ideas into
-            reality.
+            <br /><span style={{fontSize:'19px'}}>I have always been fascinated by the intersection of technology, business, and design. I believe that a great product is more than just a set of features, it's about creating a delightful user experience that solves a problem in a unique and innovative way.</span>
           </motion.p>
         </div>
       </div>

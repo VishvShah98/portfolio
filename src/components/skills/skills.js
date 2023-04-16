@@ -39,7 +39,9 @@ export default function Skills() {
           animate={controls}
           ref={ref}
         >
-          <p className='skill-heading' style={{  color: "#7E3C6E" }}>Frontend</p>
+          <p className="skill-heading" style={{ color: "#7E3C6E" }}>
+            Frontend
+          </p>
           <ul
             style={{
               listStyle: "none",
@@ -95,6 +97,21 @@ export default function Skills() {
                 src="https://img.icons8.com/ios-filled/50/null/javascript-logo.png"
               />
               JavaScript
+            </li>
+            <li>
+              <motion.img
+                animate={{
+                  rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
+                  transition: {
+                    duration: 0.5,
+                    repeatDelay: 2,
+                    repeat: Infinity,
+                  },
+                }}
+                className="icon"
+                src="https://img.icons8.com/color/48/null/typescript.png"
+              />
+              TypeScript
             </li>
             <li>
               <motion.img
@@ -183,7 +200,9 @@ export default function Skills() {
           animate={controls}
           ref={ref}
         >
-          <p className='skill-heading' style={{  color: "#2E86C1" }}>Tools</p>
+          <p className="skill-heading" style={{ color: "#2E86C1" }}>
+            Tools
+          </p>
           <ul
             style={{
               listStyle: "none",
@@ -312,7 +331,9 @@ export default function Skills() {
           animate={controls}
           ref={ref}
         >
-          <p className='skill-heading' style={{  color: "green" }}>Backend</p>
+          <p className="skill-heading" style={{ color: "green" }}>
+            Backend
+          </p>
           <ul
             style={{
               listStyle: "none",

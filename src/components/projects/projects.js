@@ -98,10 +98,10 @@ export default function Projects(props) {
               <div
                 style={{
                   fontWeight: "500",
-                  fontSize: "2vw",
+                  fontSize: "20px",
                   textAlign: "center",
-                  marginBottom: "20px",
-                  color:'black'
+                  color:'black',
+                  padding:'15px'
                 }}
               >
                 {info}
