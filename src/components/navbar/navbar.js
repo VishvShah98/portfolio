@@ -6,6 +6,7 @@ import {
   FaHome,
   FaProjectDiagram,
   FaEnvelope,
+  FaUser
 } from "react-icons/fa";
 
 const linkVariants = {
@@ -100,6 +101,11 @@ export default function Navbar() {
           icon={<FaLinkedin />}
           label="LinkedIn"
           link="https://www.linkedin.com/in/vishv-shah"
+        />
+        <NavButton
+          icon={<FaUser />}
+          label="Resume"
+          link="https://drive.google.com/file/d/1a-Bd7tttKSNn666l09lc-EaeiP2XNxqp/view?usp=sharing"
         />
       </div>
     </motion.nav>
