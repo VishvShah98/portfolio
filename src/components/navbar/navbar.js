@@ -105,7 +105,7 @@ export default function Navbar() {
         <NavButton
           icon={<FaUser />}
           label="Resume"
-          link="https://drive.google.com/file/d/1GvnagiH7OicU8thHu6My6Q22vvAqegUX/view?usp=share_link"
+          link="https://drive.google.com/file/d/1KsLfFfAaYdWZgFhgApnRhlY-oLs_vcTS/view?usp=sharing"
         />
       </div>
     </motion.nav>
