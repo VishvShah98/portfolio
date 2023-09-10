@@ -15,7 +15,7 @@ export default function LockScreen() {
         className="homeScreen"
         style={{
           background:
-            "linear-gradient(180deg, rgb(230, 255, 0) 0%, rgb(3, 209, 0) 100%)"
+          "linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 100%)"
         }}
         animate={{
           y: ["0vh", "-100vh"]

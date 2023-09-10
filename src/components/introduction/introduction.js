@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Model22 from "../models/model2";
+
 export default function Introduction() {
   const paragraphVariants = {
     initial: {
@@ -14,6 +15,7 @@ export default function Introduction() {
       },
     },
   };
+
   const imageVariants = {
     initial: {
       opacity: 0,
@@ -28,67 +30,25 @@ export default function Introduction() {
     },
   };
 
+  const commonDivStyle = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "100%",
+  };
+
   return (
-    // <div
-    //   style={{
-    //     display: "flex",
-    //     justifyContent: "center",
-    //     alignItems: "center",
-    //     padding: "0 5vw"
-    //   }}
-    // >
-    //   <motion.div
-    //     variants={imageVariants}
-    //     initial="initial"
-    //     animate="animate"
-
-    //     style={{
-    //       width: "35vw",
-    //       height: "35vw",
-    //       marginRight: "8vw"
-    //     }}
-
-    //   > <Model22 /></motion.div>
-
-    //   <motion.p
-    //     variants={paragraphVariants}
-    //     initial="initial"
-    //     animate="animate"
-    //     style={{
-    //       color: "white",
-    //       borderRadius: "5% 5% 5% 5%",
-    //       flex: 1,
-    //       padding: "0 1vw",
-    //       height: "25vw",
-    //       width: "40vw",
-    //       fontFamily: "Open Sans, sans-serif",
-    //       fontSize: "1.5vw",
-    //       display: "flex",
-    //       flexDirection: "column",
-    //       justifyContent: "center",
-    //       textAlign:'left'
-    //     }}
-    //   >
-    //     <span style={{ fontSize: "4vw", paddingBottom: "1vw" }}>
-    //       Hi, I'm <span className="importantText">Vishv Shah</span>, a{" "}
-    //       <span className="importantText">Software Developer</span>
-    //     </span>
-    //     With expertise in software development and a deep understanding of data
-    //     science, I aim to build scalable and efficient applications that drive
-    //     business growth. Let's work together to turn your ideas into reality.
-    //   </motion.p>
-    // </div>
-    <div style={{ height: "100vh", display: "flex", flexWrap: "wrap" }}>
+    <div
+      style={{
+        height: "100vh",
+        display: "flex",
+        flexWrap: "wrap",
+        background: "#0F172A",
+      }}
+    >
       <div style={{ width: "50%", position: "relative" }}>
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "100%",
-          }}
-        >
+        <div style={commonDivStyle}>
           <motion.div
             variants={imageVariants}
             initial="initial"
@@ -98,16 +58,9 @@ export default function Introduction() {
           </motion.div>
         </div>
       </div>
+
       <div style={{ width: "50%", position: "relative" }}>
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            width: "100%",
-          }}
-        >
+        <div style={commonDivStyle}>
           <motion.p
             variants={paragraphVariants}
             initial="initial"
@@ -120,13 +73,40 @@ export default function Introduction() {
               flexDirection: "column",
               justifyContent: "center",
               textAlign: "left",
+              padding: "0 20px",
             }}
           >
             <span className="intro-heading">
-              I'm <span className="importantText">Vishv Shah</span>, a
-              <span className="importantText"> Web Developer</span>
+              <span
+                className="importantText"
+                style={{
+                  color: "white",
+                  fontWeight: "100",
+                  margin: "0",
+                  fontSize: "4rem",
+                  marginBottom: "0",
+                  lineHeight: "1",
+                }}
+              >
+                Vishv Shah
+              </span>
+              <br />
+              <span
+                className="importantText"
+                style={{ color: "#b3c5dd", margin: "0", fontSize: "4rem" }}
+              >
+                Web Developer
+              </span>
             </span>
-            <br /><span style={{fontSize:'19px'}}>I have always been fascinated by the intersection of technology, business, and design. I believe that a great product is more than just a set of features, it's about creating a delightful user experience that solves a problem in a unique and innovative way.</span>
+            <br />
+            <span style={{ fontSize: "1rem", color: "#b3c5dd", margin: "0" }}>
+              I'm a fresh Computer Science graduate from Lakehead University. With
+              my passion for technology and a Master's degree under my belt, I'm
+              ready to embark on exciting new challenges in the digital realm. I
+              focus on delivering key outcomes and swiftly adjusting to new
+              learnings to solve problems. I'm a natural at putting big ideas
+              into action under pressure.
+            </span>
           </motion.p>
         </div>
       </div>

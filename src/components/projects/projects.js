@@ -54,6 +54,8 @@ export default function Projects(props) {
                       loop
                       muted
                       style={{ height: "100%", width: "100%" }}
+                      loading="lazy"
+                      preload="metadata"
                     >
                       <source src={v} type="video/mp4" />
                     </video>

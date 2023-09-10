@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   /* background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(66, 93, 228) 100%); */
-  background: black;
+  background: #0f172a;
   overflow-x: "hidden";
 }
 
@@ -40,7 +40,9 @@ a {
   width: 15vw;
   height: 15vw;
   /* left: 25vw; */
-  background-color: white;
+  background-color: #22d3ee;
+
+  color: #0f172a;
   position: absolute;
   display: flex;
   align-items: center;
@@ -64,7 +66,7 @@ li {
 
 .importantText {
   font-weight: bold;
-  color: greenyellow;
+  color: "#b3c5dd";
 }
 
 .slider {
@@ -72,7 +74,7 @@ li {
   max-width: 650px;
 }
 
-.mainSlider{
+.mainSlider {
   max-height: 650px;
   max-width: 750px;
 }
@@ -88,7 +90,6 @@ li {
   color: white;
   position: relative;
 }
-
 @media (max-width: 768px) {
   .navbar {
     font-size: 2.75vw;
@@ -107,8 +108,6 @@ li {
     font-weight: 550;
   }
   .skill-box {
-    width: 30vh;
-    height: 30vh;
     border-radius: 20%;
     margin-bottom: 1vh;
   }
@@ -201,7 +200,7 @@ li {
   .skill-box {
     width: 25vw;
     height: 25vw;
-    border-radius: 20%;
+    border-radius: 10%;
   }
   .skill-heading {
     font-size: 2.5vw;

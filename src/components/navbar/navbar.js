@@ -1,70 +1,68 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
-  FaGithub,
-  FaLinkedin,
-  FaHome,
-  FaProjectDiagram,
-  FaEnvelope,
-  FaUser
+  FaStar,
 } from "react-icons/fa";
 
 const linkVariants = {
-  hover: { scale: 1.2 },
+  hover: { color: "#22D3EE" },
 };
 
-const NavButton = ({ icon, label, link, click }) => {
-  return (
-    <motion.a
-      onClick={click}
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      variants={linkVariants}
-      className='navbar'
-      whileHover="hover"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        marginRight: "2vw",
-        textDecoration: "none",
-        color: "white",
-        fontWeight: "bold",
-        cursor: "pointer"
-      }}
-    >
-      <span style={{ marginRight: "0.5vw", textDecoration: "none" }}>
-        {label}
-      </span>
-      {icon}
-    </motion.a>
-  );
-};
+let lastScrollPos = window.pageYOffset;
 
 export default function Navbar() {
-  const handleMyWorkClick = (event) => {
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setIsNavbarVisible(
+      currentScrollPos < lastScrollPos || currentScrollPos < 20
+    );
+    lastScrollPos = currentScrollPos;
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleProjectsClick = (event) => {
     event.preventDefault();
     const projectsSection = document.getElementById("projects");
     projectsSection.scrollIntoView({ behavior: "smooth" });
   };
-  const handleHomeClick = (event) => {
+  const handleLogoClick = (event) => {
     event.preventDefault();
     const projectsSection = document.getElementById("home");
     projectsSection.scrollIntoView({ behavior: "smooth" });
   };
-  const handleContactClick = (event) => {
+  const handleAboutClick = (event) => {
     event.preventDefault();
-    const projectsSection = document.getElementById("contact");
+    const projectsSection = document.getElementById("about");
     projectsSection.scrollIntoView({ behavior: "smooth" });
   };
+
+  const handleSkillsClick = (event) => {
+    event.preventDefault();
+    const projectsSection = document.getElementById("skills");
+    projectsSection.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <motion.nav
       initial={{ y: -10, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "anticipate" }}
+      animate={{
+        y: isNavbarVisible ? 0 : -100,
+        opacity: isNavbarVisible ? 1 : 0,
+      }}
+      transition={{ duration: 0.3, ease: "anticipate" }}
       style={{
         position: "fixed",
-        background: "#212529",
+        background: "rgba(15, 23, 42, 0.7)",
+        backdropFilter: "blur(10px)",
         top: 0,
         left: 0,
         right: 0,
@@ -77,37 +75,53 @@ export default function Navbar() {
       }}
     >
       <div style={{ display: "flex", alignItems: "center" }}>
-        <NavButton icon={<FaHome />} label="Home" click={handleHomeClick} />
-
-        <NavButton
-          icon={<FaProjectDiagram />}
-          label="Projects"
-          click={handleMyWorkClick}
-        />
-
-        <NavButton
-          icon={<FaEnvelope />}
-          label="Contact"
-          click={handleContactClick}
-        />
+        <NavButton icon={<FaStar size="40" color="#22D3EE" />} click={handleLogoClick} />
       </div>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <NavButton
-          icon={<FaGithub />}
-          label="GitHub"
-          link="https://github.com/VishvShah98"
-        />
-        <NavButton
-          icon={<FaLinkedin />}
-          label="LinkedIn"
-          link="https://www.linkedin.com/in/vishv-shah"
-        />
-        <NavButton
-          icon={<FaUser />}
-          label="Resume"
-          link="https://drive.google.com/file/d/1KsLfFfAaYdWZgFhgApnRhlY-oLs_vcTS/view?usp=sharing"
-        />
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <NavButton label="About" click={handleAboutClick} />
+        <NavButton label="Skills" click={handleSkillsClick} />
+        <NavButton label="Projects" click={handleProjectsClick} />
       </div>
     </motion.nav>
   );
 }
+
+const NavButton = ({ icon, label, link, click }) => {
+  return (
+    <motion.a
+      onClick={click}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      variants={linkVariants}
+      className="navbar"
+      whileHover="hover"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        marginRight: "2vw",
+        textDecoration: "none",
+        color: "white",
+        fontWeight: "100",
+        fontSize: "1.2rem",
+        fontFamily: "monospace",
+        cursor: "pointer",
+        padding: "10px",
+        borderRadius: "5px",
+        transition: "background 0.3s",
+      }}
+    >
+      <span style={{ marginRight: "0.5vw", textDecoration: "none" }}>
+        {label}
+      </span>
+      {icon}
+    </motion.a>
+  );
+};

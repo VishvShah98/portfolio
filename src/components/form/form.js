@@ -1,110 +1,99 @@
-// import React from 'react'
-// import { useForm, ValidationError } from '@formspree/react';
-
-// export default function Form() {
-//   const [state, handleSubmit] = useForm("mpzerqww");
-//   if (state.succeeded) {
-//       return <p>Thank you!</p>;
-//   }
-//   return (<div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh'}}>
-//       <form onSubmit={handleSubmit}>
-//       <label htmlFor="email">
-//         Email Address
-//       </label>
-//       <input
-//         id="email"
-//         type="email" 
-//         name="email"
-//       />
-//       <ValidationError 
-//         prefix="Email" 
-//         field="email"
-//         errors={state.errors}
-//       />
-//       <textarea
-//         id="message"
-//         name="message"
-//       />
-//       <ValidationError 
-//         prefix="Message" 
-//         field="message"
-//         errors={state.errors}
-//       />
-//       <button type="submit" disabled={state.submitting}>
-//         Submit
-//       </button>
-//     </form></div>
-//   );
-// }
-import React from 'react'
-import { useForm, ValidationError } from '@formspree/react';
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function Form() {
   const [state, handleSubmit] = useForm("mpzerqww");
   if (state.succeeded) {
-      return <p style={{color:'white'}}>Thank you!</p>;
+    return <p style={{ color: "#2ecc71" }}>Thank you!</p>;
   }
   return (
-    <div style={{height:'100vh'}}>
-    <div style={{
-      display: 'flex',
-      justifyContent:'center',
-      alignItems: 'center',
-
-      fontFamily: 'Open Sans, sans-serif',
-      marginBottom:'20px'
-    }}>
-      <form onSubmit={handleSubmit} style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        width:'300px',
-        padding: '20px',
-        border: '3px solid black',
-       // background:'#ADFF2F',
-       background:'#E4E6F1',
-        borderRadius:'5%'
-      }}>
-        <label htmlFor="email" style={{ marginBottom: '10px', fontWeight:'600', fontFamily: "Open Sans, sans-serif" }}>
-          Get in touch !
-        </label>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        background: "#0F172A",
+      }}
+    >
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          width: "100%",
+          maxWidth: "600px",
+          padding: "30px",
+          color: "#333",
+          border: "1px solid #ccc",
+          background: "#E6E6FA",
+          borderRadius: "10px",
+          boxShadow: "0 0 10px rgba(0, 0, 0, 0.1)",
+          fontFamily: "Open Sans, sans-serif",
+        }}
+      >
+        <h2
+          style={{
+            marginBottom: "20px",
+            fontWeight: "600",
+            fontSize: "1.5em",
+            color: "black",
+          }}
+        >
+          Get in touch!
+        </h2>
         <input
           id="email"
-          type="email" 
+          type="email"
           name="email"
           placeholder="Your email address"
-          style={{ width: '100%', marginBottom: '20px', border: '1px solid black' , fontFamily: "Open Sans, sans-serif"}}
+          required
+          style={{
+            width: "100%",
+            padding: "10px",
+            marginBottom: "20px",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+            fontFamily: "Arial, Helvetica, sans-serif",
+          }}
         />
-        <ValidationError 
-          prefix="Email" 
-          field="email"
-          errors={state.errors}
-        />
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
         <textarea
           id="message"
           name="message"
           placeholder="Message"
-          style={{ width: '100%', height: '200px', marginBottom: '20px', resize:'none', border: '1px solid black',  fontFamily: "Open Sans, sans-serif" }}
+          required
+          style={{
+            width: "100%",
+            padding: "10px",
+            height: "150px",
+            marginBottom: "20px",
+            resize: "none",
+            border: "1px solid #ccc",
+            borderRadius: "5px",
+            fontFamily: "Arial, Helvetica, sans-serif",
+          }}
         />
-        <ValidationError 
-          prefix="Message" 
+        <ValidationError
+          prefix="Message"
           field="message"
           errors={state.errors}
         />
-        <button type="submit" disabled={state.submitting} style={{ width: '100%', height:'30px' , background:'black', color:'white', fontWeight:'700'}}>
-          Submit
-        </button>
-      </form></div>
-      {/* <p className='email'
+        <button
+          type="submit"
+          disabled={state.submitting}
           style={{
-            textAlign: "center",
-            margin:'0px'
+            width: "100%",
+            padding: "10px",
+            background: "#0F172A",
+            color: "#fff",
+            fontWeight: "700",
+            borderRadius: "5px",
+            fontFamily: "Arial, Helvetica, sans-serif",
+            cursor: "pointer",
           }}
         >
-          <a href="mailto:vishvshahwork@gmail.com" style={{fontWeight:'1000' , color: "transparent",
-              WebkitTextStroke: `2px #ADFF2F`}}>vishvshahwork@gmail.com</a>
-          
-        </p> */}
+          Submit
+        </button>
+      </form>
     </div>
   );
 }
