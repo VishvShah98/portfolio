@@ -99,7 +99,7 @@ export default function Main() {
       desktop_image: mira_desktop,
       mobile_image: mira_mobile,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+        "Money Maven is a finance dashboard application that visualizes annual financial data through graphs and charts, including revenue, profit, and expenses. Powered by ML regression, it also predicts upcoming year's revenue.",
       languages: ["React", "Typescript", "MUI", "MongoDB", "Linear Regression"],
       github_link: "https://github.com/VishvShah98/moneyMaven-frontend",
       live_link: "https://github.com/VishvShah98/moneyMaven-frontend",
