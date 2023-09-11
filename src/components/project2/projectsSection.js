@@ -195,7 +195,7 @@ const ProjectsSection = ({ projects }) => {
             <div
               style={{
                 width: "20rem", // Change width to 20rem
-                height: "25rem", // Change height to 30rem
+                height: "18rem", // Change height to 30rem
                 borderRadius: "0.75rem",
                 overflow: "hidden",
                 boxShadow: "0px 6px 10px rgba(0, 0, 0, 0.1)",
@@ -215,9 +215,9 @@ const ProjectsSection = ({ projects }) => {
                 position: "absolute",
                 color: "white",
                 borderRadius: "0.75rem",
-                top: "9rem", // Positioned to overlap half the image's height
-                left: index % 2 === 0 ? "15rem" : "0rem", // Adjusted left position
-                right: index % 2 === 0 ? "0rem" : "15rem", // Adjusted right position
+                top: "2rem", // Positioned to overlap half the image's height
+                left: index % 2 === 0 ? "20rem" : "0rem", // Adjusted left position
+                right: index % 2 === 0 ? "0rem" : "20rem", // Adjusted right position
                 zIndex: "1",
               }}
             >
