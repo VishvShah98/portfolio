@@ -27,7 +27,7 @@ export default function LockScreen() {
       <motion.div
         className="homeScreen"
         style={{
-          background: "linear-gradient(180deg, #1F1F1F 0%, #1F1F1F 100%)"
+          background: "linear-gradient(180deg, black 0%, black 100%)"
         }}
         initial="initial"
         animate="animate"
