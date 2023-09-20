@@ -16,22 +16,7 @@ import money from "./assets/moneyMaven.png";
 import mira_mobile from "./assets/mira_mobile.png";
 import mira_desktop from "./assets/mira_desktop.png";
 import ProjectsSection from "./components/project2/projectsSection.js";
-import IR1 from "./assets/IR-1.mp4";
-import IR2 from "./assets/IR-2.mp4";
-import IR3 from "./assets/IR-3.mp4";
-import IR4 from "./assets/IR-4.mp4";
-import SS1 from "./assets/SS-1.mp4";
-import SS2 from "./assets/SS-2.mp4";
-import SL1 from "./assets/SL-1.mp4";
-import SL2 from "./assets/SL-2.mp4";
-import VS1 from "./assets/VS-1.mp4";
-import VS2 from "./assets/VS-2.mp4";
-import MM1 from "./assets/MM-1.mp4";
-import MM2 from "./assets/MM-2.mp4";
-import IRMobile from "./assets/IR-mobile.mp4";
-import MMMobile from "./assets/MM-mobile.mp4";
-import SSMobile from "./assets/SS-mobile.mp4";
-import VSMobile from "./assets/VS-mobile.mp4";
+
 
 import { FaCode, FaDesktop } from "react-icons/fa";
 import Slider from "react-slick";
@@ -41,11 +26,7 @@ import { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Main() {
-  const videosIR = [IR1, IR2, IR3, IR4];
-  const videosSS = [SS1, SS2];
-  const videosVS = [VS1, VS2];
-  const videosMM = [MM1, MM2];
-  const videosSL = [SL1, SL2];
+
   const iconStyles = {
     color: "#B3C5DD",
     fontSize: "24px",
