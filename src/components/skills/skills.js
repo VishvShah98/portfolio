@@ -206,7 +206,7 @@ export default function Skills() {
                 className="icon"
                 src="https://img.icons8.com/color/1024/html-5--v1.png"
               />
-              HTML5
+              HTML
             </li>
             <li style={listItemStyle}>
               <motion.img
@@ -221,7 +221,7 @@ export default function Skills() {
                 className="icon"
                 src="https://img.icons8.com/color/1024/null/css3.png"
               />
-              CSS 3
+              CSS
             </li>
             <li style={listItemStyle}>
               <motion.img
@@ -238,7 +238,7 @@ export default function Skills() {
               />
               JavaScript
             </li>
-            <li style={listItemStyle}>
+            {/* <li style={listItemStyle}>
               <motion.img
                 animate={{
                   rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
@@ -252,7 +252,7 @@ export default function Skills() {
                 src="https://img.icons8.com/color/1024/null/typescript.png"
               />
               TypeScript
-            </li>
+            </li> */}
             <li style={listItemStyle}>
               <motion.img
                 animate={{
@@ -283,7 +283,7 @@ export default function Skills() {
               />
               Vue.js
             </li>
-            <li style={listItemStyle}>
+            {/* <li style={listItemStyle}>
               <motion.img
                 animate={{
                   rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
@@ -297,8 +297,8 @@ export default function Skills() {
                 src="https://img.icons8.com/fluency/1024/angularjs.png"
               />
               AngularJS
-            </li>
-            <li style={listItemStyle}>
+            </li> */}
+            {/* <li style={listItemStyle}>
               <motion.img
                 animate={{
                   rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
@@ -312,7 +312,7 @@ export default function Skills() {
                 src="https://img.icons8.com/nolan/1024/nextjs.png"
               />
               Next.js
-            </li>
+            </li> */}
             <li style={listItemStyle}>
               <motion.img
                 animate={{
@@ -420,7 +420,7 @@ export default function Skills() {
               />
               Postman
             </li>
-            <li style={listItemStyle}>
+            {/* <li style={listItemStyle}>
               <motion.img
                 animate={{
                   rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
@@ -434,7 +434,7 @@ export default function Skills() {
                 src="https://img.icons8.com/nolan/1024/docker.png"
               />
               Docker
-            </li>
+            </li> */}
             <li style={listItemStyle}>
               <motion.img
                 animate={{
@@ -527,7 +527,7 @@ export default function Skills() {
               />
               MongoDB
             </li>
-            <li style={listItemStyle}>
+            {/* <li style={listItemStyle}>
               <motion.img
                 animate={{
                   rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
@@ -541,8 +541,8 @@ export default function Skills() {
                 src="https://img.icons8.com/nolan/1024/api-settings.png"
               />
               RESTful APIs
-            </li>
-            <li style={listItemStyle}>
+            </li> */}
+            {/* <li style={listItemStyle}>
               <motion.img
                 animate={{
                   rotate: [0, -10, 10, -10, 10, -5, 5, -5, 0],
@@ -556,7 +556,7 @@ export default function Skills() {
                 src="https://img.icons8.com/color/1024/null/amazon-web-services.png"
               />
               AWS
-            </li>
+            </li> */}
           </ul>
         </motion.div>
       </div>
