@@ -7,6 +7,7 @@ body {
   overflow-x: "hidden";
 }
 
+
 a {
   text-decoration: none;
   color: black;
@@ -91,6 +92,218 @@ li {
   color: white;
   position: relative;
 }
+
+
+
+
+.circle-above {
+  width: 250px; /* You can change this to any size you want */
+  height: 250px;
+  position: fixed;
+  border-radius: 50%;
+  background-image: linear-gradient(to top right, #900209,#DF3B03 , #FCAA07 90%);
+  top: 45%; /* Position it at the center vertically */
+  transform: translateY(-120%); /* Shift it above center */
+  left: 60%; /* Position it a bit to the right of the center */
+}
+
+.circle-below {
+  width: 450px; /* You can change this to any size you want */
+  height: 450px;
+  position: fixed;
+  border-radius: 50%;
+  background-image: linear-gradient(to top right, black 30%,#510513, #BC1805,#FCAA07);
+  top: 5%; 
+  transform: translateY(80%); /* Shift it below center */
+  left: 25%; 
+  overflow: hidden;
+  z-index: 1;
+}
+
+.circle-blurred-1{
+  width: 100px; /* You can change this to any size you want */
+  height: 100px;
+  backdrop-filter: blur(7px);
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  top: 25%; /* Position it at the center vertically */
+  transform: translateY(-120%); /* Shift it above center */
+  left: 72%; /* Position it a bit to the right of the center */
+  z-index: 1;
+}
+
+.circle-blurred-2{
+  width: 400px; /* You can change this to any size you want */
+  height: 400px;
+  backdrop-filter: blur(7px);
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  top: 25%; 
+  transform: translateY(80%); /* Shift it below center */
+  left: 10%;
+  z-index: 1;
+}
+
+.wrapper_1 {
+  position:fixed;
+  top: 0;
+  left: 200px;
+  width: 100%;
+  height: 100%;
+  /* filter: url('#filter'); */
+  filter: blur(5px);
+  
+}
+
+.wrapper_2 {
+  position: absolute;
+  top: -250px;
+  left:-400px;
+  width: 100%;
+  height: 100%;
+  /* filter: url('#filter'); */
+  filter: blur(20px);
+}
+
+.wrapper_3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  /* filter: url('#filter'); */
+  filter: blur(10px);
+}
+
+.ball {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+}
+
+.ball:before {
+  background: #da6d08;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.ball:nth-child(1) {
+  transform: translate(-66px);
+  animation: x-axis-lateral 8s infinite alternate ease-in-out;
+}
+
+.ball:nth-child(1):before {
+  animation: y-axis-lateral 4s infinite 0.4s alternate ease-in-out;
+}
+
+.ball:nth-child(2) {
+  animation: x-axis 8s infinite alternate ease-in-out;
+}
+
+.ball:nth-child(2):before {
+  animation: y-axis 4s infinite 2s alternate ease-in-out;
+}
+
+.ball:nth-child(3) {
+  transform: translate(66px, 78px);
+  animation: x-axis-lateral 8s infinite alternate ease-in-out;
+}
+
+.ball:nth-child(3):before {
+  animation: y-axis-lateral 4s infinite 1.6s alternate ease-in-out;
+}
+.ball-red {
+  width: 400px;
+  height: 200px;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+}
+
+.ball-red:before {
+  background: #920209;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.ball-red:nth-child(1) {
+  transform: translate(-66px);
+  animation: x-axis-lateral 8s infinite alternate ease-in-out;
+}
+
+.ball-red:nth-child(1):before {
+  animation: y-axis-lateral 4s infinite 0.4s alternate ease-in-out;
+}
+
+.ball-red:nth-child(2) {
+  animation: x-axis 8s infinite alternate ease-in-out;
+}
+
+.ball-red:nth-child(2):before {
+  animation: y-axis 4s infinite 2s alternate ease-in-out;
+}
+
+.ball-red:nth-child(3) {
+  transform: translate(66px, 78px);
+  animation: x-axis-lateral 8s infinite alternate ease-in-out;
+}
+
+.ball-red:nth-child(3):before {
+  animation: y-axis-lateral 4s infinite 1.6s alternate ease-in-out;
+}
+
+@keyframes x-axis {
+  0% {
+    transform: translate(-96px);
+  }
+  100% {
+    transform: translate(96px);
+  }
+}
+
+@keyframes y-axis {
+  0% {
+    transform: translateY(42px);
+  }
+  100% {
+    transform: translateY(-66px) scale(0.8);
+    /* background: #da6d08; */
+  }
+}
+
+@keyframes x-axis-lateral {
+  0% {
+    transform: translate(-36px);
+  }
+  100% {
+    transform: translate(36px);
+  }
+}
+
+@keyframes y-axis-lateral {
+  0% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(-60px);
+    /* background: #da6d08; */
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     font-size: 2.75vw;
