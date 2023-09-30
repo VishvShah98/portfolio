@@ -31,8 +31,8 @@ export default function Slide() {
     return stars;
   }
 
-  const [starsLayer1, setStarsLayer1] = useState(generateStars(16*16, 1));
-  const [starsLayer2, setStarsLayer2] = useState(generateStars(16, 2));
+  const [starsLayer1, setStarsLayer1] = useState(generateStars(36, 1));
+  const [starsLayer2, setStarsLayer2] = useState(generateStars(12, 2));
   const [starsLayer3, setStarsLayer3] = useState(generateStars(4, 3));
 
   useEffect(() => {
