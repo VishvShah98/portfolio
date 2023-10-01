@@ -10,13 +10,13 @@ import pic3 from "./assets/pic3.jpg";
 import lungs from "./assets/lungs.jpg";
 import bank from "./assets/bank.png";
 import mira from "./assets/mira.png";
+import hangman from "./assets/hangman.png";
 import shirt from "./assets/shirtLab.png";
 import jaliyan from "./assets/jaliyan.png";
 import money from "./assets/moneyMaven.png";
 import mira_mobile from "./assets/mira_mobile.png";
 import mira_desktop from "./assets/mira_desktop.png";
 import ProjectsSection from "./components/project2/projectsSection.js";
-
 
 import { FaCode, FaDesktop } from "react-icons/fa";
 import Slider from "react-slick";
@@ -26,7 +26,6 @@ import { useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 export default function Main() {
-
   const iconStyles = {
     color: "#B3C5DD",
     fontSize: "24px",
@@ -57,24 +56,41 @@ export default function Main() {
   };
   const projects = [
     {
+      name: "Mira",
+      cover_image: mira, // URL to the cover image
+      description:
+        "Mira is a responsive landing page for a project management app that highlights common landing page components like feature blocks, social proof bars and pricing plans, all enhanced with JavaScript for optimal user engagement.",
+      languages: ["HTML", "CSS", "Javascript"],
+      github_link: "https://github.com/VishvShah98/mira",
+      live_link: "https://mira-eight-beta.vercel.app/",
+      type: "Single Page Applications",
+    },
+    {
       name: "Your Bank",
       cover_image: bank, // URL to the cover image
       description:
         "Your Bank is your gateway to modern banking, designed with your convenience in mind. Enjoy easy banking with features like deposits, withdrawals, transfers, and peer-to-peer transactions via email. Keep track of your financial journey with transaction history and interactive expense charts",
-      languages: ["Vue.js","Node.js","Express.js","MySQL","Prisma","Amazon's RDS"],
+      languages: [
+        "Vue.js",
+        "Node.js",
+        "Express.js",
+        "MySQL",
+        "Prisma",
+        "Amazon's RDS",
+      ],
       github_link: "https://github.com/VishvShah98/Banking_Application",
       live_link: "https://github.com/VishvShah98/Banking_Application",
-      type:"Full Stack Projects"
+      type: "Full Stack Projects",
     },
     {
       name: "Shirt Lab",
       cover_image: shirt, // URL to the cover image
       description:
         "ShirtLab is your gateway to 3D t-shirt personalization. Create unique designs effortlessly and apply them to your shirt model. Powered by AI-generated logo suggestions for a truly customized experience.",
-      languages: ["React","Three.js","OpenAI API"],
+      languages: ["React", "Three.js", "OpenAI API"],
       github_link: "https://github.com/VishvShah98/shirtLab-frontend",
       live_link: "https://github.com/VishvShah98/shirtLab-frontend",
-      type:"Full Stack Projects"
+      type: "Full Stack Projects",
     },
     {
       name: "Money Maven",
@@ -86,7 +102,7 @@ export default function Main() {
       languages: ["React", "Typescript", "MUI", "MongoDB", "Linear Regression"],
       github_link: "https://github.com/VishvShah98/moneyMaven-frontend",
       live_link: "https://github.com/VishvShah98/moneyMaven-frontend",
-      type:"Full Stack Projects"
+      type: "Full Stack Projects",
     },
     {
       name: "Jaliyan Clinic",
@@ -96,28 +112,29 @@ export default function Main() {
       languages: ["Next.js", "React", "Tailwind CSS"],
       github_link: "https://github.com/VishvShah98/jaliyanhealthcare",
       live_link: "https://jaliyanhealthcare-eta.vercel.app/",
-      type:"Single Page Applications"
+      type: "Single Page Applications",
     },
-    {
-      name: "Mira",
-      cover_image: mira, // URL to the cover image
-      description:
-        "Mira is a responsive landing page for a project management app that highlights common landing page components like feature blocks, social proof bars and pricing plans, all enhanced with JavaScript for optimal user engagement.",
-      languages: ["HTML", "CSS", "Javascript"],
-      github_link: "https://github.com/VishvShah98/mira",
-      live_link: "https://mira-eight-beta.vercel.app/",
-      type:"Single Page Applications"
-    },
+
     {
       name: "Lung Cancer Classification",
       cover_image: lungs, // URL to the cover image
       description:
         "This research project focuses on the analysis of lung cancer classification using k-nearest neighbor (kNN), Support Vector Machine (SVM), and Artificial Neural Network (ANN) algorithms. The study utilizes the NCCTG database for lung cancer data and employs Genetic Algorithm (GA) and Principal Component Analysis (PCA) for feature reduction. The optimal trade-off between accuracy and the number of features is achieved in round 2, where kNN achieves 99% accuracy with 5 selected features.",
-      languages: ["Python","KNN","SVM","ANN","GA","PCA"],
+      languages: ["Python", "KNN", "SVM", "ANN", "GA", "PCA"],
       github_link: "https://github.com/VishvShah98/Lung-Cancer-Classification",
       live_link: "https://github.com/VishvShah98/Lung-Cancer-Classification",
-      type:"Python Projects"
-    },   
+      type: "Python Projects",
+    },
+    {
+      name: "Hangman",
+      cover_image: hangman,
+      description:
+        "Hangman is a classic word-guessing game that challenges your vocabulary skills. In this digital adaptation, you'll face the ultimate word puzzle challenge. Try to guess the secret word by selecting individual letters. Each incorrect guess brings you one step closer to the hangman's fate, so choose your letters wisely! The game features an interactive and user-friendly interface, making it an enjoyable and educational pastime for players of all ages.",
+      languages: ["React", "Typescript", "Tailwind CSS", "React Hot Toast"],
+      github_link: "https://github.com/VishvShah98/hangman",
+      live_link: "https://hangman-tau-five.vercel.app/",
+      type: "Games",
+    },
   ];
   const settings = {
     dots: true,
