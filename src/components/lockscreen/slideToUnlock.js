@@ -92,7 +92,7 @@ export default function Slide() {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
     const threshold = 100;
-     const maxScale = 1.5;
+     const maxScale = 1;
 
     setStarsLayer1((prevStars) =>
       prevStars.map((star) => ({
