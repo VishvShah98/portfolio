@@ -25,7 +25,7 @@ export default function Slide() {
         x: Math.random() * w,
         y: Math.random() * window.innerHeight,
         size: size,
-        speed: 2.5 / size,
+        speed: 0.75 / size,
       });
     }
     return stars;
