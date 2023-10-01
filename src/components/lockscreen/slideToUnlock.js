@@ -1,5 +1,5 @@
 import "../../styles.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect , useRef} from "react";
 import { useMotionValue } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -25,15 +25,17 @@ export default function Slide() {
         x: Math.random() * w,
         y: Math.random() * window.innerHeight,
         size: size,
+        originalSize: size,
         speed: 0.75 / size,
+        backgroundColor: "white", // Initial color
       });
     }
     return stars;
   }
 
-  const [starsLayer1, setStarsLayer1] = useState(generateStars(36, 1));
-  const [starsLayer2, setStarsLayer2] = useState(generateStars(12, 2));
-  const [starsLayer3, setStarsLayer3] = useState(generateStars(4, 3));
+  const [starsLayer1, setStarsLayer1] = useState(generateStars(45, 1));
+  const [starsLayer2, setStarsLayer2] = useState(generateStars(15, 2));
+  const [starsLayer3, setStarsLayer3] = useState(generateStars(5, 3));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,6 +65,8 @@ export default function Slide() {
   const [hueRotate, setHueRotate] = useState(240);
   const [isIncreasing, setIsIncreasing] = useState(true);
 
+  
+
   useEffect(() => {
     const intervalId = setInterval(() => {
       setHueRotate((prevHueRotate) => {
@@ -81,38 +85,98 @@ export default function Slide() {
     return () => clearInterval(intervalId);
   }, [isIncreasing]);
 
+
+  const containerRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    const threshold = 100;
+     const maxScale = 1.5;
+
+    setStarsLayer1((prevStars) =>
+      prevStars.map((star) => ({
+        ...star,
+        backgroundColor:
+          Math.abs(star.x - mouseX) < threshold && Math.abs(star.y - mouseY) < threshold
+            ? "yellow" // Change the color when the mouse is close
+            : "white", // Reset to white otherwise
+            size:
+            Math.abs(star.x - mouseX) < threshold && Math.abs(star.y - mouseY) < threshold
+            ?star.originalSize * maxScale : star.originalSize// Reset to white otherwise
+      }))
+    );
+    setStarsLayer2((prevStars) =>
+    prevStars.map((star) => ({
+      ...star,
+      backgroundColor:
+        Math.abs(star.x - mouseX) < threshold && Math.abs(star.y - mouseY) < threshold
+          ? "yellow" // Change the color when the mouse is close
+          : "white", // Reset to white otherwise
+          size:
+          Math.abs(star.x - mouseX) < threshold && Math.abs(star.y - mouseY) < threshold
+          ?star.originalSize * maxScale : star.originalSize// Reset to white otherwise
+    }))
+  );
+  setStarsLayer3((prevStars) =>
+  prevStars.map((star) => ({
+    ...star,
+    backgroundColor:
+      Math.abs(star.x - mouseX) < threshold && Math.abs(star.y - mouseY) < threshold
+        ? "yellow" // Change the color when the mouse is close
+        : "white", // Reset to white otherwise
+        size:
+        Math.abs(star.x - mouseX) < threshold && Math.abs(star.y - mouseY) < threshold
+        ?star.originalSize * maxScale : star.originalSize// Reset to white otherwise
+  }))
+);
+  };
+
+  useEffect(() => {
+    const container = containerRef.current;
+
+    if (container) {
+      container.addEventListener("mousemove", handleMouseMove);
+      return () => {
+        container.removeEventListener("mousemove", handleMouseMove);
+      };
+    }
+  }, []);
+
   return (
     <div
-      style={{
-        "--primary-color": "white",
-        "--secondary-color": "rgba(0, 0, 0, 0.5)",
-        backgroundImage:
-          "linear-gradient(to top right, #04061D 10%, #6B040F, #E65B04)",
-        width: "100%",
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        overflow: "hidden",
-        transition: "filter 0.25s linear",
-        filter: `hue-rotate(${hueRotate}deg)`,
-      }}
-    >
-      {starsLayer1.map((star, index) => (
-        <div
-          key={`star-1-${index}`}
-          style={{
-            position: "fixed",
-            top: star.y,
-            left: star.x,
-            width: star.size,
-            height: star.size,
-            backgroundColor: "white",
-            overflow: "hidden",
-          }}
-        ></div>
-      ))}
+    ref={containerRef}
+    style={{
+      "--primary-color": "white",
+      "--secondary-color": "rgba(0, 0, 0, 0.5)",
+      backgroundImage:
+        "linear-gradient(to top right, #04061D 10%, #6B040F, #E65B04)",
+      width: "100%",
+      height: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+      overflow: "hidden",
+      transition: "filter 0.25s linear",
+      filter: `hue-rotate(${hueRotate}deg)`,
+    }}
+  >
+    {starsLayer1.map((star, index) => (
+      <div
+        key={`star-1-${index}`}
+        style={{
+          position: "fixed",
+          top: star.y,
+          left: star.x,
+          width: star.size,
+          height: star.size,
+          backgroundColor: star.backgroundColor, // Use backgroundColor here
+          overflow: "hidden",
+          transition: "background-color 0.2s ease-in-out", // Add a transition for color change
+        }}
+      ></div>
+    ))}
       {starsLayer2.map((star, index) => (
         <div
           key={`star-2-${index}`}
@@ -122,9 +186,10 @@ export default function Slide() {
             left: star.x,
             width: star.size,
             height: star.size,
-            backgroundColor: "white",
+            backgroundColor: star.backgroundColor,
             overflow: "hidden",
           }}
+      
         ></div>
       ))}
       {starsLayer3.map((star, index) => (
@@ -136,9 +201,10 @@ export default function Slide() {
             left: star.x,
             width: star.size,
             height: star.size,
-            backgroundColor: "white",
+            backgroundColor: star.backgroundColor,
             overflow: "hidden",
           }}
+    
         ></div>
       ))}
       <div className="circle-above"></div>
@@ -193,45 +259,6 @@ export default function Slide() {
 
       <div className="circle-below"></div>
       <div className="circle-blurred-2"></div>
-      {/* <div className="wrapper_1">
-        <div className="ball"></div>
-        <div className="ball"></div>
-        <div className="ball"></div>
-      </div>
-      <svg>
-        <defs>
-          <filter id="filter">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="blur" />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -10"
-              result="filter"
-            />
-            <feComposite in="SourceGraphic" in2="filter" operator="atop" />
-          </filter>
-        </defs>
-      </svg>
-
-      <div className="wrapper_2">
-        <div className="ball-red"></div>
-        <div className="ball-red"></div>
-        <div className="ball-red"></div>
-      </div>
-      <svg>
-        <defs>
-          <filter id="filter">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="blur" />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 28 -10"
-              result="filter"
-            />
-            <feComposite in="SourceGraphic" in2="filter" operator="atop" />
-          </filter>
-        </defs>
-      </svg> */}
     </div>
   );
 }
