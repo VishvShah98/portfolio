@@ -64,6 +64,7 @@ export default function Main() {
       languages: ["Vue.js","Node.js","Express.js","MySQL","Prisma","Amazon's RDS"],
       github_link: "https://github.com/VishvShah98/Banking_Application",
       live_link: "https://github.com/VishvShah98/Banking_Application",
+      type:"Full Stack Projects"
     },
     {
       name: "Shirt Lab",
@@ -73,6 +74,7 @@ export default function Main() {
       languages: ["React","Three.js","OpenAI API"],
       github_link: "https://github.com/VishvShah98/shirtLab-frontend",
       live_link: "https://github.com/VishvShah98/shirtLab-frontend",
+      type:"Full Stack Projects"
     },
     {
       name: "Money Maven",
@@ -84,6 +86,7 @@ export default function Main() {
       languages: ["React", "Typescript", "MUI", "MongoDB", "Linear Regression"],
       github_link: "https://github.com/VishvShah98/moneyMaven-frontend",
       live_link: "https://github.com/VishvShah98/moneyMaven-frontend",
+      type:"Full Stack Projects"
     },
     {
       name: "Jaliyan Clinic",
@@ -93,6 +96,7 @@ export default function Main() {
       languages: ["Next.js", "React", "Tailwind CSS"],
       github_link: "https://github.com/VishvShah98/jaliyanhealthcare",
       live_link: "https://jaliyanhealthcare-eta.vercel.app/",
+      type:"Single Page Applications"
     },
     {
       name: "Mira",
@@ -102,6 +106,7 @@ export default function Main() {
       languages: ["HTML", "CSS", "Javascript"],
       github_link: "https://github.com/VishvShah98/mira",
       live_link: "https://mira-eight-beta.vercel.app/",
+      type:"Single Page Applications"
     },
     {
       name: "Lung Cancer Classification",
@@ -111,6 +116,7 @@ export default function Main() {
       languages: ["Python","KNN","SVM","ANN","GA","PCA"],
       github_link: "https://github.com/VishvShah98/Lung-Cancer-Classification",
       live_link: "https://github.com/VishvShah98/Lung-Cancer-Classification",
+      type:"Python Projects"
     },   
   ];
   const settings = {
@@ -160,196 +166,7 @@ export default function Main() {
         </div>
 
         <ProjectsSection projects={projects} />
-        {/* <div id="projects" style={{ marginTop: "10vh" }}>
-          <p
-            style={{
-              fontSize: "4vw",
-              marginBottom: "2vw",
-              textAlign: "center",
-            }}
-          >
-            <span className="importantText intro-heading">
-              Immersive Realities
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/VishvShah98/immersive-realities/tree/master"
-                className="codeLink"
-              >
-                {" "}
-                <FaCode />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://vishvshah98.github.io/immersive-realities/"
-                className="liveLink"
-              >
-                {" "}
-                <FaDesktop />
-              </a>
-            </span>
-          </p>
 
-          <Projects
-            video={videosIR}
-            mobileVideo={IRMobile}
-            projectInfo={[
-              "I'm currently building Immersive Realities' website, showcasing their cutting-edge AR and VR solutions through captivating 3D models and immersive VR filters. Join us on this exciting journey into immersive realities.",
-            ]}
-          />
-          <p
-            style={{
-              fontSize: "4vw",
-              marginBottom: "2vw",
-              textAlign: "center",
-            }}
-          >
-            <span className="importantText intro-heading">
-              Shirt Lab
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/VishvShah98/shirtLab-frontend"
-                className="codeLink"
-              >
-                {" "}
-                <FaCode />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://shirtlab.onrender.com/"
-                className="liveLink"
-              >
-                {" "}
-                <FaDesktop />
-              </a>
-            </span>
-          </p>
-
-          <Projects
-            video={videosSL}
-            //mobileVideo={IRMobile}
-            projectInfo={[
-              "I generated and explored ideas to create a Minimum Viable Product utilizing OpenAI's API. As a result, I developed a web app that enables users to customize a 3D model of a t-shirt using AI-generated images.",
-            ]}
-          />
-
-          <p
-            style={{
-              fontSize: "4vw",
-              marginBottom: "2vw",
-              textAlign: "center",
-            }}
-          >
-            <span className="importantText intro-heading">
-              Money Maven
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/VishvShah98/moneyMaven-frontend"
-                className="codeLink"
-              >
-                {" "}
-                <FaCode />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://moneymaven.onrender.com/"
-                className="liveLink"
-              >
-                {" "}
-                <FaDesktop />
-              </a>
-            </span>
-          </p>
-
-          <Projects
-            video={videosMM}
-            mobileVideo={MMMobile}
-            projectInfo={[
-              "Money Maven is a finance dashboard app that displays annual financial data through graphs and charts, including revenue, profit, and expenses. Powered by ML regression, it also predicts upcoming year's revenue.",
-            ]}
-          />
-
-          <p
-            style={{
-              fontSize: "4vw",
-              marginBottom: "2vw",
-              textAlign: "center",
-            }}
-          >
-            <span className="importantText intro-heading">
-              Sociosphere
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/VishvShah98/sociosphere-frontend"
-                className="codeLink"
-              >
-                {" "}
-                <FaCode />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://sociosphere.onrender.com/"
-                className="liveLink"
-              >
-                {" "}
-                <FaDesktop />
-              </a>{" "}
-            </span>
-          </p>
-          <Projects
-            video={videosSS}
-            mobileVideo={SSMobile}
-            projectInfo={[
-              "Sociosphere is a comprehensive social media app with full stack functionality. Users can create, share, like, and comment on posts, as well as connect with friends for a seamless social experience.",
-            ]}
-          />
-
-          <p
-            style={{
-              fontSize: "4vw",
-              marginBottom: "2vw",
-              textAlign: "center",
-            }}
-          >
-            <span className="importantText intro-heading">
-              Tutor Website
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://github.com/VishvShah98/vedic-sanskrit/tree/master"
-                className="codeLink"
-              >
-                {" "}
-                <FaCode />
-              </a>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href="https://vishvshah98.github.io/vedic-sanskrit/"
-                className="liveLink"
-              >
-                {" "}
-                <FaDesktop />
-              </a>
-            </span>
-          </p>
-
-          <Projects
-            video={videosVS}
-            mobileVideo={VSMobile}
-            projectInfo={[
-              "I developed a website for a Sanskrit tutor, featuring a monthly schedule, study material downloads, and a location finder on Google Maps for convenient access to the tutor's services.",
-            ]}
-          />
-        </div> */}
-        {/* <motion.div className="progress" style={{ scaleX }} /> */}
         <div
           style={{
             position: "fixed",
