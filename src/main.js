@@ -16,6 +16,8 @@ import jaliyan from "./assets/jaliyan.png";
 import money from "./assets/moneyMaven.png";
 import mira_mobile from "./assets/mira_mobile.png";
 import mira_desktop from "./assets/mira_desktop.png";
+import gai from "./assets/GAI.png";
+import awt from "./assets/AWT.png";
 import ProjectsSection from "./components/project2/projectsSection.js";
 
 import { FaCode, FaDesktop } from "react-icons/fa";
@@ -55,6 +57,24 @@ export default function Main() {
     color: "#22D3EE",
   };
   const projects = [
+    {
+      name: "Generative AI Services",
+      cover_image: gai, // URL to the cover image
+      description: "Our meticulously designed, fully responsive website showcases our company's expertise in Generative AI Services. It features a wealth of intricate UI components and captivating animations.",
+      languages: ["React","Tailwind CSS"],
+      github_link: "https://github.com/VishvShah98/GenerativeAIServices",
+      live_link: "https://genaiservices.vercel.app/",
+      type: "Single Page Applications",
+    },
+    {
+      name: "App Website Template",
+      cover_image: awt, // URL to the cover image
+      description: "Designed to be visually appealing and highly responsive, our app landing page is the perfect platform for any company to effectively showcase their mobile application. With its user-friendly design and engaging content, it serves as an ideal gateway for presenting your app to a wider audience, making a lasting impression on potential users and stakeholders alike.",
+      languages: ["React","Tailwind CSS"],
+      github_link: "https://github.com/VishvShah98/spaceman",
+      live_link: "https://spaceman-kappa.vercel.app/",
+      type: "Single Page Applications",
+    },
     {
       name: "Mira",
       cover_image: mira, // URL to the cover image
