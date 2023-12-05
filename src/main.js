@@ -18,6 +18,8 @@ import mira_mobile from "./assets/mira_mobile.png";
 import mira_desktop from "./assets/mira_desktop.png";
 import gai from "./assets/GAI.png";
 import awt from "./assets/AWT.png";
+import dj from "./assets/dadJokes.png";
+import socio from "./assets/socio.png";
 import ProjectsSection from "./components/project2/projectsSection.js";
 
 import { FaCode, FaDesktop } from "react-icons/fa";
@@ -58,35 +60,27 @@ export default function Main() {
   };
   const projects = [
     {
-      name: "Generative AI Services",
+      name: "Fully Responsive Website",
       cover_image: gai, // URL to the cover image
-      description: "Our meticulously designed, fully responsive website showcases our company's expertise in Generative AI Services. It features a wealth of intricate UI components and captivating animations.",
-      languages: ["React","Tailwind CSS"],
+      description:
+        "A meticulously designed, fully responsive website showcases a company's expertise in Generative AI Services. It features a wealth of intricate UI components and captivating animations created from scratch.",
+      languages: ["React", "Tailwind CSS"],
       github_link: "https://github.com/VishvShah98/GenerativeAIServices",
       live_link: "https://genaiservices.vercel.app/",
       type: "Single Page Applications",
     },
     {
-      name: "App Website Template",
+      name: "Fully Responsive Website",
       cover_image: awt, // URL to the cover image
-      description: "Designed to be visually appealing and highly responsive, our app landing page is the perfect platform for any company to effectively showcase their mobile application. With its user-friendly design and engaging content, it serves as an ideal gateway for presenting your app to a wider audience, making a lasting impression on potential users and stakeholders alike.",
-      languages: ["React","Tailwind CSS"],
+      description:
+        "Designed to be visually appealing and highly responsive, this app landing page is the perfect platform for any company to effectively showcase their mobile application. With its user-friendly design and engaging content, it serves as an ideal gateway for presenting an app to a wider audience, making a lasting impression on potential users and stakeholders alike.",
+      languages: ["React", "Tailwind CSS"],
       github_link: "https://github.com/VishvShah98/spaceman",
       live_link: "https://spaceman-kappa.vercel.app/",
       type: "Single Page Applications",
     },
     {
-      name: "Mira",
-      cover_image: mira, // URL to the cover image
-      description:
-        "Mira is a responsive landing page for a project management app that highlights common landing page components like feature blocks, social proof bars and pricing plans, all enhanced with JavaScript for optimal user engagement.",
-      languages: ["HTML", "CSS", "Javascript"],
-      github_link: "https://github.com/VishvShah98/mira",
-      live_link: "https://mira-eight-beta.vercel.app/",
-      type: "Single Page Applications",
-    },
-    {
-      name: "Your Bank",
+      name: "Banking Application",
       cover_image: bank, // URL to the cover image
       description:
         "Your Bank is your gateway to modern banking, designed with your convenience in mind. Enjoy easy banking with features like deposits, withdrawals, transfers, and peer-to-peer transactions via email. Keep track of your financial journey with transaction history and interactive expense charts",
@@ -103,17 +97,7 @@ export default function Main() {
       type: "Full Stack Projects",
     },
     {
-      name: "Shirt Lab",
-      cover_image: shirt, // URL to the cover image
-      description:
-        "ShirtLab is your gateway to 3D t-shirt personalization. Create unique designs effortlessly and apply them to your shirt model. Powered by AI-generated logo suggestions for a truly customized experience.",
-      languages: ["React", "Three.js", "OpenAI API"],
-      github_link: "https://github.com/VishvShah98/shirtLab-frontend",
-      live_link: "https://github.com/VishvShah98/shirtLab-frontend",
-      type: "Full Stack Projects",
-    },
-    {
-      name: "Money Maven",
+      name: "Finance Dashboard Application",
       cover_image: money, // URL to the cover image
       desktop_image: mira_desktop,
       mobile_image: mira_mobile,
@@ -124,6 +108,49 @@ export default function Main() {
       live_link: "https://github.com/VishvShah98/moneyMaven-frontend",
       type: "Full Stack Projects",
     },
+    {
+      name: "Social Media Application",
+      cover_image: socio, // URL to the cover image
+      description:
+        "Sociosphere is a dynamic and fully responsive social media platform. This platform is designed to offer users a comprehensive social media experience, allowing them to connect, share, and engage with each other in a modern, interactive environment.",
+      languages: ["React", "Node.js", "Express.js", "MongoDB", "Mongoose"],
+      github_link:
+        "https://github.com/VishvShah98/sociosphere-frontend/tree/master",
+      live_link:
+        "https://github.com/VishvShah98/sociosphere-frontend/tree/master",
+      type: "Full Stack Projects",
+    },
+    {
+      name: "Browser Extension",
+      cover_image: dj, // URL to the cover image
+      description:
+        "Dad Jokes is a fun and light-hearted Chrome extension that brings a smile to your day with random dad jokes. Using the Dad Jokes API from RapidAPI, this extension displays a new joke every time you open a new tab or click on the extension icon",
+      languages: ["HTML", "CSS", "Javascript", "Rapid API"],
+      github_link: "https://github.com/VishvShah98/ChromeExtension_DadJokes",
+      live_link: "https://github.com/VishvShah98/ChromeExtension_DadJokes",
+      type: "Full Stack Projects",
+    },
+    {
+      name: "Customize 3D T-Shirts",
+      cover_image: shirt, // URL to the cover image
+      description:
+        "ShirtLab is your gateway to 3D t-shirt personalization. Create unique designs effortlessly and apply them to your shirt model. Powered by AI-generated logo suggestions for a truly customized experience.",
+      languages: ["React", "Three.js", "OpenAI API"],
+      github_link: "https://github.com/VishvShah98/shirtLab-frontend",
+      live_link: "https://github.com/VishvShah98/shirtLab-frontend",
+      type: "Full Stack Projects",
+    },
+    {
+      name: "Mira",
+      cover_image: mira, // URL to the cover image
+      description:
+        "Mira is a responsive landing page for a project management app that highlights common landing page components like feature blocks, social proof bars and pricing plans, all enhanced with JavaScript for optimal user engagement.",
+      languages: ["HTML", "CSS", "Javascript"],
+      github_link: "https://github.com/VishvShah98/mira",
+      live_link: "https://mira-eight-beta.vercel.app/",
+      type: "Single Page Applications",
+    },
+  
     {
       name: "Jaliyan Clinic",
       cover_image: jaliyan, // URL to the cover image
